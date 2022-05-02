@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MovieInformationEx</string>
+    <string name="errorMessage">네트워크 연결에 실패하였습니다.\n 네트워크 상태를 확인한 후 다시 시도해주세요.</string>
+</resources>
