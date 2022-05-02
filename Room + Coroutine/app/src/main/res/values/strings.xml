@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMemoAppRoom</string>
+    <string name="toolbar_text">메 모</string>
+    <string name="create_button_text">+</string>
+    <string name="delete">삭제</string>
+    <string name="edit">수정</string>
+</resources>
