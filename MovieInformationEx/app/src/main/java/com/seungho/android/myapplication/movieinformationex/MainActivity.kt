@@ -2,19 +2,25 @@ package com.seungho.android.myapplication.movieinformationex
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.opengl.Visibility
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
@@ -26,31 +32,35 @@ import com.seungho.android.myapplication.movieinformationex.databinding.Activity
 import com.seungho.android.myapplication.movieinformationex.data.retrofit.MovieModel
 import com.seungho.android.myapplication.viewmodel.MainViewModel
 import com.seungho.android.myapplication.viewmodel.MainViewModelFactory
+import kotlinx.coroutines.Runnable
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private lateinit var viewModel: MainViewModel
 
-    var isSortedDate : Boolean = true
-    var isSortedWatcher : Boolean = false
+    private lateinit var progressDialog: AppCompatDialog
+
+    var isSortedDate: Boolean = true
+    var isSortedWatcher: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        startProgress()
         getMovie()
 
         setSupportActionBar(binding.toolbar)
 
         supportActionBar!!.setDisplayShowTitleEnabled(true)
 
-        if(!isNetworkAvailable(this)){ //네트워크 꺼져있으면 어플 재시작
+        if (!isNetworkAvailable(this)) { //네트워크 꺼져있으면 어플 재시작
             val builder = AlertDialog.Builder(this) //AlertDialog2
             builder.setMessage("네트워크 연결을 확인 후 다시 시도해주세요")
             builder.setPositiveButton("확인") { _, _ ->
                 ActivityCompat.finishAffinity(this)
-                val intent = Intent(this,MainActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 exitProcess(0)
             }
@@ -94,18 +104,43 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    private fun startProgress() {
+        showLoadingOn()
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            showLoadingOff()
+        },3500)
+    }
+
+    private fun showLoadingOn() {
+        progressDialog = AppCompatDialog(this)
+        progressDialog.setCancelable(false)
+        progressDialog.window?.setBackgroundDrawable(ColorDrawable(android.graphics.Color.TRANSPARENT))
+        progressDialog.setContentView(R.layout.loading_dialog_custom)
+        progressDialog.show()
+        var img_loading_frame = progressDialog.findViewById<ImageView>(R.id.iv_frame_loading)
+        var frameAnimation = img_loading_frame?.background as AnimationDrawable
+        img_loading_frame.post(Runnable { frameAnimation.start() })
+    }
+
+    private fun showLoadingOff() {
+        if (progressDialog != null && progressDialog.isShowing) {
+            progressDialog.dismiss()
+        }
+    }
+
     private fun getMovie() {
         val movieRepository = MovieRepository()
         val viewModelFactory = MainViewModelFactory(movieRepository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
         viewModel.getMovieAPI()
         viewModel.myResponse.observe(this, Observer { it ->
-            if(it.isSuccessful) {
+            if (it.isSuccessful) {
                 if (isSortedDate) {
-                        updateUI(it.body()?.movies!!.sortedWith(compareBy { it.date }).reversed())
+                    updateUI(it.body()?.movies!!.sortedWith(compareBy { it.date }).reversed())
                 }
                 if (isSortedWatcher) {
-                        updateUI(it.body()?.movies!!.sortedWith(compareBy { it.watcher}).reversed())
+                    updateUI(it.body()?.movies!!.sortedWith(compareBy { it.watcher }).reversed())
                 }
             } else {
                 Toast.makeText(this, "데이터 불러오기에 실패했습니다.", Toast.LENGTH_SHORT).show()
@@ -114,16 +149,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(listData: List<MovieModel>) {
-        val posterAdapter = PosterAdapter(listData , this)
+        val posterAdapter = PosterAdapter(listData, this)
         binding.recyclerView.adapter = posterAdapter
         binding.recyclerView.layoutManager = GridLayoutManager(this, 3)
     }
 
     private fun isNetworkAvailable(context: Context): Boolean { //인터넷 상태 확인
-        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val nw      = connectivityManager.activeNetwork ?: return false
+            val nw = connectivityManager.activeNetwork ?: return false
             val actNw = connectivityManager.getNetworkCapabilities(nw) ?: return false
 
             return when {

@@ -52,10 +52,8 @@ class DetailMovieActivity: AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     @SuppressLint("SetTextI18n")
     private fun updateUI() { //UI 업데이트하기
-        val myFormatter = DecimalFormat("###,###")
         val data = intent.getSerializableExtra("MovieModel") as MovieModel
         GlideApp
             .with(this)
@@ -71,7 +69,10 @@ class DetailMovieActivity: AppCompatActivity() {
         binding.movieTimeTextView.text = "상영시간 : ${data.time}분"
         binding.movieGradeTextView.text = "등급 : ${data.grade}세 관람가"
         binding.movieRateTextView.text = "평점 : ${data.rate} / 10"
-        binding.movieWatcherTextView.text = "누적 관객 : ${myFormatter.format(data.watcher)}명"
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val myFormatter = DecimalFormat("###,###")
+            binding.movieWatcherTextView.text = "누적 관객 : ${myFormatter.format(data.watcher)}명"
+        }
         binding.movieDirectorTextView.text = "감독 : ${data.director}"
         binding.movieActorTextView.text = "출연 배우 : ${data.actor}"
         binding.synopsisTextView.text = data.synopsis
