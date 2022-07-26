@@ -26,3 +26,7 @@
 
 영화 정보를 불러와 만든 영화 어플입니다.
 사용 기술스택 : retrofit , glide , viewModel, LiveData
+
+### 5. ComposeRecycler
+
+Jetpack Compose로 RecyclerView를 사용하는 예제입니다.
