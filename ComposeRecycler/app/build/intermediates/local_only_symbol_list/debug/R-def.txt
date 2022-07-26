@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color grey
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable p1
+drawable p10
+drawable p11
+drawable p12
+drawable p2
+drawable p3
+drawable p4
+drawable p5
+drawable p6
+drawable p7
+drawable p8
+drawable p9
+layout activity_profile
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.ComposeRecycler
+xml backup_rules
+xml data_extraction_rules

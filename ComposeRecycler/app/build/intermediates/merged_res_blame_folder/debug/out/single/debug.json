@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p5.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p5.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p12.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p12.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p7.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p7.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p10.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p10.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p1.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p1.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/xml_data_extraction_rules.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p9.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p9.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/xml_backup_rules.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p4.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p4.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p6.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p6.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p2.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p2.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p11.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p11.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/layout_activity_profile.xml.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p8.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p8.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/drawable-v24_p3.jpg.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/drawable-v24/p3.jpg"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.seungho.android.myapplication.composerecycler.app-merged_res-50:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.seungho.android.myapplication.composerecycler.app-main-52:/mipmap-xxhdpi/ic_launcher.webp"
+    }
+]

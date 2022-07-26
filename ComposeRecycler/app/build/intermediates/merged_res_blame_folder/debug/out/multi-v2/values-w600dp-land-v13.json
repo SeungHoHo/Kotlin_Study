@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.seungho.android.myapplication.composerecycler.app-mergeDebugResources-48:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\82105\\.gradle\\caches\\transforms-3\\2f2a3ed243233bb8b2256eb472b5f51f\\transformed\\material-1.4.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}
