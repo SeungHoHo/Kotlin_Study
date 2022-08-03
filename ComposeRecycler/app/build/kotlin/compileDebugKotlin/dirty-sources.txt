@@ -1,5 +1,0 @@
-C:\Users\82105\AndroidStudioProjects\ComposeRecycler\app\src\main\java\com\seungho\android\myapplication\composerecycler\MainActivity.kt
-C:\Users\82105\AndroidStudioProjects\ComposeRecycler\app\src\main\java\com\seungho\android\myapplication\composerecycler\ui\theme\Theme.kt
-C:\Users\82105\AndroidStudioProjects\ComposeRecycler\app\src\main\java\com\seungho\android\myapplication\composerecycler\ui\theme\Color.kt
-C:\Users\82105\AndroidStudioProjects\ComposeRecycler\app\src\main\java\com\seungho\android\myapplication\composerecycler\ui\theme\Type.kt
-C:\Users\82105\AndroidStudioProjects\ComposeRecycler\app\src\main\java\com\seungho\android\myapplication\composerecycler\ui\theme\Shape.kt
