@@ -26,3 +26,7 @@
 
 영화 정보를 불러와 만든 영화 어플입니다.
 사용 기술스택 : retrofit , glide , viewModel, LiveData
+
+#### 5. PuppyRecyclerView
+
+강아지 정보를 저장하고 불러와서 리사이클러뷰 형식으로 출력하는 어플입니다.
