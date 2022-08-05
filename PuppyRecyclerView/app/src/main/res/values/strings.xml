@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PuppyRecyclerView</string>
+    <string name="personality">Personality</string>
+    <string name="sex">Sex</string>
+    <string name="age">Age</string>
+</resources>
